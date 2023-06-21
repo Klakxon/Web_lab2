@@ -1,0 +1,315 @@
+body {
+    background-color: #D0D0D0;
+    font-family: Arial, sans-serif;
+}
+
+
+/*Стилі бейджу*/
+.badge {
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    width: 90px;
+    height: 17px;
+    background-color: darkviolet;
+    color: white;
+    padding: 15px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    cursor: pointer;
+    transition: bottom 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, height 0.3s ease-in-out; /* Додаємо анімацію */
+}
+
+.badge:hover {
+    bottom: 0px;
+    background-color: green;
+    transform: scale(1.1);
+    height: calc(17px + 50px);
+}
+
+
+.badge-text {
+    font-weight: bold;
+}
+
+.badge-hover-text {
+    display: none;
+}
+
+.badge:hover .badge-hover-text {
+    display: block;
+}
+
+/*Друк бейджу*/
+@media print {
+    .badge {
+        background-color: white;
+        border: 2px solid darkviolet;
+        color: darkviolet;
+        height: 60px;
+    }
+
+    .badge-text {
+        display: none;
+    }
+
+    .badge-hover-text {
+        display: block;
+        font-weight: bold;
+    }
+}
+/*Оформлення таблиць*/
+.table1, .table2 {
+    border-collapse: collapse;
+    border: 3px darkgrey;
+    border-radius: 7px;
+}
+
+.table1 td, .table2 td {
+    border-left: none;
+    border-right: none;
+}
+
+.table1 td, .table1 th {
+    width: 33.33%; /* Розподілити рівномірно на 3 колонки */
+}
+
+
+    /*Вирівнювання вмісту комірок*/
+
+/*Елементи таблиці1*/
+
+.table1 {
+    width: 60%;
+    float: left;
+    background-color: white;
+}
+
+.table1 tr:first-child {
+    height: 60px;
+}
+
+.table1 tr:not(:first-child) {
+    height: 50px; /* Задати бажану висоту для рядків 2, 3 та 4 */
+}
+
+    /*Перший рядок*/
+.table1 tr:first-child td {
+    width: 95%;
+}
+
+.table1 tr:first-child td input[type="text"] {
+    width: calc(95% - 80px);
+    height: 40px;
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 5px;
+    border-color: lavender;
+    font-size: 18px;
+    padding-left: 15px;
+    margin-left: 10px;
+}
+
+.table1 .add-button {
+    width: 80px;
+    height: 40px;
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 5px;
+    border-color: dodgerblue;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 100%;
+}
+
+    /*Другий рядок*/
+.table1 span.number {
+    width: 32px;
+    height: 32px;
+    line-height: 100%;
+    background-color: #D0D0D0;
+    color: black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 5px;
+}
+
+    /*Третій рядок*/
+.table1 .row-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table1 .button-minus {
+    border-radius: 50%;
+    background-color: red;
+    /* Додаткові стилі кнопки */
+    width: 40px;
+    height: 40px;
+    color: white;
+    border-color: red;
+    cursor: pointer;
+    font-size: 130%;
+}
+
+.table1 .button-plus {
+    border-radius: 50%;
+    background-color: limegreen;
+    /* Додаткові стилі кнопки */
+    width: 40px;
+    height: 40px;
+    color: white;
+    border-color: limegreen;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 115%;
+}
+
+    /*Четвертий рядок*/
+.table1 .edit-name {
+    width: 120px;
+    border: none;
+    margin-left: 10px;
+    font-size: 17px;
+}
+
+.table1 .button-cancel {
+    border-radius: 5px;
+    background-color: red;
+    /* Додаткові стилі кнопки */
+    width: 40px;
+    height: 40px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 115%;
+    border-color: red;
+}
+
+.table1 .button-near-cancel {
+    border-radius: 5px;
+    background-color: lightgray;
+    /* Додаткові стилі кнопки */
+    width: 100px;
+    height: 40px;
+    color: black;
+    border-color: lightgray;
+    font-size: 90%;
+    margin-right: 3px;
+}
+
+.table1 .right-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+/*Елементи таблиці2*/
+
+.table2 {
+    width: 35%;
+    float: left;
+    margin-left: 5%;
+    background-color: white;
+    height: 260px;
+}
+
+.table2 tr {
+    height: 50px;
+}
+
+/*Перший і третій рядок*/
+
+.table2 td.name{
+    font-size: 25px;
+
+}
+
+/*Другий рядок*/
+.table2 span.name {
+    height: 32px;
+    line-height: 100%;
+    background-color: #D0D0D0;
+    color: black;
+    border-radius: 5px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 5px;
+    text-align: center;
+    padding-left: 5px;
+}
+
+.table2 span.number {
+    width: 22px;
+    height: 22px;
+    line-height: 100%;
+    background-color: darkorange;
+    color: white;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 5px;
+    text-align: center
+}
+
+
+
+/* Стилі підказки */
+.container {
+    position: relative;
+}
+
+button[data-tooltip] {
+    position: relative;
+}
+
+button[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    z-index: 1;
+    background-color: mediumpurple;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+button[data-tooltip]:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    visibility: visible;
+}
+
+@media screen and (max-width: 700px) {
+    .table1, .table2 {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
+    .table2 {
+        margin-right: 7%;
+        margin-top: 4%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .table1, .table2 {
+        width: 550px;
+    }
+    .container {
+        overflow-x: scroll;
+    }
+}

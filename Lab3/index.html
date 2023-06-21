@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="uk">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Page</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+<body>
+    <div class="badge">
+        <div class="badge-text"> BuyList </div>
+        <div class="badge-hover-text">Робота <br>
+            Кишенчука <br>
+            Віктора</div>
+    </div>
+
+    <div class="container">
+        <table border="1" class="table1">
+            <tbody>
+            <tr>
+                <td colspan="3">
+                    <input id="productName" type="text" placeholder="Назва товару">
+                    <button onclick="addProducts()" data-tooltip="Кнопка 'Додати'" class="add-button"><b>Додати</b></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="edit-name" type="text" value="Помідори">
+                </td>
+                <td>
+                    <div class="row-container">
+                        <button class="button-minus" data-tooltip="Кнопка відняти"><b>–</b></button>
+                        <span class="number">2</span>
+                        <button class="button-plus" data-tooltip="Кнопка додати"><b>+</b></button>
+                    </div>
+                </td>
+                <td>
+                    <div class="right-container">
+                        <button class="button-near-cancel">Купити</button>
+                        <button class="button-cancel" data-tooltip="Кнопка відміни"><b>×</b></button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="edit-name" type="text" value="Печиво">
+                </td>
+                <td>
+                    <div class="row-container">
+                        <button class="button-minus" data-tooltip="Кнопка відняти"><b>–</b></button>
+                        <span class="number">2</span>
+                        <button class="button-plus" data-tooltip="Кнопка додати"><b>+</b></button>
+                    </div>
+                </td>
+                <td>
+                    <div class="right-container">
+                        <button class="button-near-cancel">Купити</button>
+                        <button class="button-cancel" data-tooltip="Кнопка відміни"><b>×</b></button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="edit-name" type="text" value="Сир">
+                </td>
+                <td>
+                    <div class="row-container">
+                        <button class="button-minus" data-tooltip="Кнопка відняти"><b>–</b></button>
+                        <span class="number">2</span>
+                        <button class="button-plus" data-tooltip="Кнопка додати"><b>+</b></button>
+                    </div>
+                </td>
+                <td>
+                    <div class="right-container">
+                        <button class="button-near-cancel" data-tooltip="Кнопка купити">Купити</button>
+                        <button class="button-cancel" data-tooltip="Кнопка відміни"><b>×</b></button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <table border="1" class="table2">
+            <tbody>
+                <tr>
+                    <td class="name"><b>Залишилося</b></td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="name">
+                            Помідори <span class="number">2</span>
+                        </span>
+                        <span class="name">
+                            Печиво <span class="number">2</span>
+                        </span>
+                        <span class="name">
+                            Сир <span class="number">2</span>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="name"><b>Куплено</b></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
